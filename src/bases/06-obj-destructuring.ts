@@ -1,4 +1,4 @@
-// Reutilizamos el objeto estudiante del ejercicio 3
+
 interface Estudiante { 
     nombre: string;
     edad: number;
@@ -17,9 +17,7 @@ const estudiante: Estudiante = {
     },
 };
 
-// ----------------------
-// Desestructuración y renombramiento
-// ----------------------
+
 const { 
     nombre: studentName, 
     carrera: studentCareer, 
@@ -27,26 +25,20 @@ const {
     semestre: studentSemester 
 } = estudiante;
 
-// Agrupamos algunas propiedades en un nuevo objeto
+
 const studentSummary = {
     info: { studentName, studentCareer },
     edad: studentAge,
     semestre: studentSemester,
 };
 
-// ----------------------
-// Desestructuración del nuevo objeto
-// ----------------------
+
 const { info, edad, semestre } = studentSummary;
 
-// ----------------------
-// Mostrar valores en consola
-// ----------------------
+
 console.log("Información del estudiante:", info);
 console.log("Edad del estudiante:", edad);
 console.log("Semestre del estudiante:", semestre);
 
-// ----------------------
-// Usando el método descripción
-// ----------------------
+
 console.log("Descripción completa:", estudiante.descripcion());
